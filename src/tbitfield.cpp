@@ -72,7 +72,7 @@ int TBitField::GetBit(const int n) const // получить значение б
 
 TBitField& TBitField::operator=(const TBitField &bf) // присваивание
 {
-	if (*this != bf) {
+	if (this != &bf) {
 		delete[]pMem;
 		BitLen = bf.BitLen;
 		MemLen = bf.MemLen;
